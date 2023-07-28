@@ -71,7 +71,7 @@
 
     .swiper {
       width: 100%;
-      height: 48.8281vw !important;
+      /* height: 48.8281vw !important; */
     }
 
     .swiper-slide {
@@ -128,7 +128,7 @@
 
     .swiper {
       width: 100%;
-      height: 65.1042vw !important;
+      /* height: 65.1042vw !important; */
     }
 
     .swiper-slide {
@@ -185,4 +185,8 @@
   .swiper-container {
     max-width: 400px;
     height: auto;
+  }
+
+  .swiper-wrapper {
+    align-items: center !important;
   }
