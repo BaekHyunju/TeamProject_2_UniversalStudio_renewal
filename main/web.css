@@ -668,33 +668,22 @@ li {
         margin: 0 auto;
         scroll-behavior: smooth; 
     }
-
     .full1 {
         position: relative;
         width: 100%;
         height: 100vh;
-        /* height: 140vh; */
         scroll-snap-align: end;
         scroll-snap-stop: always;
         scroll-behavior: smooth; 
     }
-
-
     .full2,
     .full4 {
         position: relative;
         background-color: #f7f7f7;
-        /* display: grid;
-        grid-template-rows: 300px 1fr;
-        justify-content: center; */
         scroll-behavior: smooth; 
     }
-
     .full3 {
         background-color: #EEF5FB;
-        /* display: grid;
-        grid-template-rows: 300px 1fr;
-        justify-content: center; */
         scroll-behavior: smooth; 
     }
 
@@ -735,6 +724,30 @@ li {
         .main_section {
             height: 100%;
         }
+        .main_section.full1 {
+            height: 100vh;
+        }
+        .main_section {
+            scroll-snap-align: none;
+            scroll-snap-stop: none;
+            scroll-behavior: none; 
+        }
+        .full1 {
+            scroll-snap-align: none;
+            scroll-snap-stop: none;
+            scroll-behavior: none; 
+        }
+        .full2,
+        .full4 {
+            position: relative;
+            background-color: #f7f7f7;
+            scroll-behavior: smooth; 
+        }
+        .full3 {
+            background-color: #EEF5FB;
+            scroll-behavior: smooth; 
+        }
+    
     }
     @media screen and (max-width:500px){
         .main_section_top {
@@ -743,8 +756,9 @@ li {
             height: 100%;
         }.main_title {
             margin-bottom: 0;
+            padding-top: 100px;
+            font-size: 30px;
         }
-        
     }
 
 
@@ -867,13 +881,7 @@ li {
 
     }
     @media screen and (max-width:500px){
-        .main_section_top {
-            flex-direction: column;
-            align-items: flex-start;
-        }.main_title {
-            margin-bottom: 0;
-            padding-top: 100px;
-        }
+
         .benefit2{
             width: 100%;
         }
@@ -881,8 +889,9 @@ li {
             width: 45.3000vw;
             height: 45.3000vw;
         }
-
-        
+        .benefit3:hover .benefit_text {
+            font-size: 20px;
+        }
         
     }
     /* 호버했을때 카드 뒤집기 */
@@ -1036,16 +1045,20 @@ li {
 
 
     /* 호버했을때 텍스트 */
-
+    .att_box {
+        position: relative;
+        top: 50%;
+        /* left: 50%; */
+        transform: translateY(-50%);
+    }
     .att_title {
         font-size: 30px;
         font-weight: 800;
         text-align: center;
         color: #2f2f2f;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         line-height: 40px;
-        height: 80px;
-    
+        /* height: 80px; */
     }
 
     .att_content {
@@ -1055,8 +1068,8 @@ li {
         color: #2f2f2f;
         line-height: 20px;
         margin-top: 10px;
-
     }
+    
     .att_mouse_account {
         animation-iteration-count: infinite;
         text-shadow: 0px 0px 500px #fff;
@@ -1130,10 +1143,11 @@ li {
         .att_title p{
             font-size: 1rem;
             line-height: 1rem;
-            font-weight: 700;
+            font-weight: 600;
             padding:0 1%;
             height: 1rem;
             margin: 0;
+            word-break: keep-all;
         }
     }
 
@@ -1145,9 +1159,11 @@ li {
         }
         .main_attraction_big {
             width: 100%;
+            height: 450px;
         }
         .att_b1{
             width: 100%;
+            height: 450px;
         }
         .main_attraction_small {
             grid-template-columns: repeat(3,1fr);
@@ -1161,7 +1177,7 @@ li {
             height: 29vw;
         }
         .att_mouse_account {
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
     }
 
@@ -1231,11 +1247,11 @@ li {
         grid-template-columns: 19.1146vw 52.0833vw 180px 19.4271vw;
     }
 */
+
 .parade2 {
     text-align: end;
     width: 100%;
 }
-
 .parade_content_total {
     display: grid;
     grid-template-columns: 100vw;
@@ -1255,6 +1271,10 @@ li {
         font-size: 1.5rem;
     }
 }
+.d-none {
+    display: none;
+}
+
 
     /* 푸터 */
     .footer {
@@ -1338,7 +1358,7 @@ li {
 @media screen and (max-width:1000px){
     
     .footer_section_total {
-        width: 94.6000vw;
+        width: 100%;
     }
 }
 @media screen and (max-width:880px){
@@ -1357,15 +1377,22 @@ li {
     }
     .footer_use_content span{
         font-size: 15px;
-        margin-right: 15px;
+        margin-right: 10px;
         word-break: keep-all ;
     }
-    @media screen and (max-width:400px){
-        .footer_US_title{
-            font-size: 1.5rem;
-        }
+    .footer_copyright {
+        margin-right: 0;
     }
-
+    
+}
+@media screen and (max-width:400px){
+    .footer_US_title{
+        font-size: 1.5rem;
+    }
+    .footer_use_content span,
+    .footer_copyright {
+        font-size: 14px;
+    }
 }
     /* 성환초이 건듦 */
     .csh__black {
@@ -1424,9 +1451,7 @@ li {
 
     
 
-    .d-none {
-        display: none;
-    }
+
 
 
 @media screen and (max-width:1024px){
