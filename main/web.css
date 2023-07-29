@@ -1459,8 +1459,8 @@ li {
         height: 100% !important;
     } 
     .parade_text_box{ height: 80%; }
-    .parade_text_title { font-size: 3vw; }
-    .parade_text_content{ font-size: 1.6vw; }
+    .parade_text_title { font-size: 1.25rem; }
+    .parade_text_content{ font-size: 1rem; }
 }
 
 .stop-scrolling {
